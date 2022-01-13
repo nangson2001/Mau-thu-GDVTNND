@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C1D3BF"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C2C2DA">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewGraph"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Thống kê tài sản theo trạng thái"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <org.eazegraph.lib.charts.PieChart
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/piechart31"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:padding="6dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="15dp"
+
+                        />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="20dp"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical">
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/R"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mặt bằng"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/tv11"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp">
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/Python"/>
+
+                            <!--Text view to display python text -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Xe cộ"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/tv12"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp">
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/CPP"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Máy móc"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/tv13"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp">
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"
+                                android:background="#4C8EDD"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Máy móc"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/tv14"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp">
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"
+                                android:background="#D710ED"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Máy móc"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/tv15"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:elevation="10dp"
+            android:layout_below="@id/cardViewGraph"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/card2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Thống kê tài sản theo giá trị"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <org.eazegraph.lib.charts.PieChart
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/piechart32"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:padding="6dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="15dp"
+
+                        />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="20dp"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical">
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/R"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mặt bằng"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/tv21"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp">
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/Python"/>
+
+                            <!--Text view to display python text -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Xe cộ"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/tv22"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp">
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/CPP"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Máy móc"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/tv23"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp">
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"
+                                android:background="#4C8EDD"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Máy móc"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/tv24"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp">
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"
+                                android:background="#D710ED"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Máy móc"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/tv25"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</ScrollView>

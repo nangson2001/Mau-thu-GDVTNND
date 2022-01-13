@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:hint="Nhập tên tài sản"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/edittext_search"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/button_them_tai_san"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_search"
+        app:layout_constraintStart_toEndOf="@+id/edittext_search"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Tìm kiếm"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_them_tai_san"
+        android:text="Xuất báo cáo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:id="@+id/table_header"
+        android:layout_marginTop="10dp"
+        android:background="#A6BCB3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_them_tai_san"
+        android:orientation="horizontal"
+        android:weightSum="21">
+        <TextView
+            android:text="STT"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:text="Tên tài sản"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:text="Nhóm tài sản"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:text="Giá nguyên"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:text="Hao mòn hằng tháng"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:text="Giá trị còn lại"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_weight="3"
+            android:textStyle="bold"/>
+        <TextView
+            android:text="Chức năng"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/table_header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/rcv_thong_tin2"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

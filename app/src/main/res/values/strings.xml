@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MauThu</string>
+    <string name="dashboard_quan_ly_tai_san">DashBoard Quản lý tài sản</string>
+    <string name="quan_ly_thong_tin_tai_san">Quản lý thông tin tài sản</string>
+    <string name="quan_ly_khau_hao_tai_san">Quản lý khấu hao tài sản</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>

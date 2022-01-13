@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThemTaiSanActivity"
+    android:orientation="vertical"
+    android:id="@+id/container_them_tai_san">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Tên tài sản"
+            android:gravity="end"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_marginStart="20dp"
+            android:id="@+id/edt_ten"
+            android:hint="Nhập tên tài sản"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Nhóm tài sản"
+            android:gravity="end"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <Spinner
+            android:id="@+id/spinner_nhom_tai_san"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_marginStart="20dp"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Loại tài sản"
+            android:gravity="end"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <Spinner
+            android:id="@+id/spinner_loai_tai_san"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_marginStart="20dp"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Trạng thái tài sản"
+            android:gravity="end"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <Spinner
+            android:id="@+id/spinner_trang_thai"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_marginStart="20dp"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Người sở hữu"
+            android:gravity="end"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_nguoi"
+            android:layout_weight="3"
+            android:layout_marginStart="20dp"
+            android:hint="Nhập tên người sở hữu tài sản"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Giá tiền"
+            android:gravity="end"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_marginStart="20dp"
+            android:id="@+id/edt_gia"
+            android:inputType="number"
+            android:hint="Nhập giá tài sản"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Khấu hao hằng tháng"
+            android:gravity="end"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_marginStart="20dp"
+            android:id="@+id/edt_khau_hao"
+            android:hint="Nhập khấu hao hằng tháng"
+            android:inputType="number"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm tài sản"
+        android:id="@+id/button_xac_nhan_them_tai_san"
+        android:padding="5dp"/>
+</LinearLayout>
