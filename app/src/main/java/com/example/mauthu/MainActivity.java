@@ -10,17 +10,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.example.mauthu.fragment.Fragment1;
 import com.example.mauthu.fragment.Fragment2;
 import com.example.mauthu.fragment.Fragment3;
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -35,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Singleton.getInstance().addData();
         setContentView(R.layout.activity_main);
         context = MainActivity.this;
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -78,12 +75,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    @Override
-    protected void onStart() {
-        Singleton.getInstance().addData();
-        super.onStart();
     }
 
     @Override

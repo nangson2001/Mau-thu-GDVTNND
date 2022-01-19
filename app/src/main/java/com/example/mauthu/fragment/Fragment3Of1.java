@@ -109,6 +109,7 @@ public class Fragment3Of1 extends Fragment {
                         "Java",
                         pcJava,
                         Color.parseColor("#D710ED")));
+        pieChart.startAnimation();
     }
 
     private void setData2() {
@@ -164,5 +165,6 @@ public class Fragment3Of1 extends Fragment {
                         "Java",
                         pcJava,
                         Color.parseColor("#D710ED")));
+        pieChart2.startAnimation();
     }
 }

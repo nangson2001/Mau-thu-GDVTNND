@@ -3,6 +3,7 @@ package com.example.mauthu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,9 +14,16 @@ import java.util.List;
 public class TaiSanAdapter extends RecyclerView.Adapter<TaiSanAdapter.TaiSanViewHolder>{
 
     private List<TaiSan> taiSanList;
+    private IItemClick iItemClick;
 
-    public TaiSanAdapter(List<TaiSan> taiSanList) {
+    public interface IItemClick {
+        void onUpdateClick(TaiSan taiSan);
+        void onDeleteClick(TaiSan taiSan);
+    }
+
+    public TaiSanAdapter(List<TaiSan> taiSanList, IItemClick iItemClick) {
         this.taiSanList = taiSanList;
+        this.iItemClick = iItemClick;
     }
 
     @NonNull
@@ -35,6 +43,12 @@ public class TaiSanAdapter extends RecyclerView.Adapter<TaiSanAdapter.TaiSanView
         holder.nhom.setText(taiSan.getNhom());
         holder.nguoiSoHuu.setText(taiSan.getNguoiSoHuu());
         holder.loai.setText(taiSan.getLoai());
+        holder.btnEdit.setOnClickListener(v -> {
+            iItemClick.onUpdateClick(taiSan);
+        });
+        holder.btnDelete.setOnClickListener(v -> {
+            iItemClick.onDeleteClick(taiSan);
+        });
     }
 
     @Override
@@ -50,6 +64,8 @@ public class TaiSanAdapter extends RecyclerView.Adapter<TaiSanAdapter.TaiSanView
         private TextView loai;
         private TextView nguoiSoHuu;
         private TextView trangThai;
+        private ImageButton btnEdit;
+        private ImageButton btnDelete;
 
 
         public TaiSanViewHolder(@NonNull View itemView) {
@@ -60,6 +76,8 @@ public class TaiSanAdapter extends RecyclerView.Adapter<TaiSanAdapter.TaiSanView
             loai = itemView.findViewById(R.id.textview_column_4);
             nguoiSoHuu = itemView.findViewById(R.id.textview_column_5);
             trangThai = itemView.findViewById(R.id.textview_column_6);
+            btnEdit = itemView.findViewById(R.id.btn_edit);
+            btnDelete = itemView.findViewById(R.id.btn_delete);
         }
     }
 }

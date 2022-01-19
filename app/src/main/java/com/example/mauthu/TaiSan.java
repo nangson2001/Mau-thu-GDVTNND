@@ -1,8 +1,5 @@
 package com.example.mauthu;
 
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
-
 import java.io.Serializable;
 
 public class TaiSan implements Serializable {
@@ -89,5 +86,32 @@ public class TaiSan implements Serializable {
 
     public void setTrangThai(String trangThai) {
         this.trangThai = trangThai;
+    }
+
+    @Override
+    public String toString() {
+        return "TaiSan{" +
+                "STT=" + STT +
+                ", ten='" + ten + '\'' +
+                ", nhom='" + nhom + '\'' +
+                ", loai='" + loai + '\'' +
+                ", nguoiSoHuu='" + nguoiSoHuu + '\'' +
+                ", trangThai='" + trangThai + '\'' +
+                ", giaTien=" + giaTien +
+                ", khauHaoHangThang=" + khauHaoHangThang +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        try {
+            TaiSan taiSan  = (TaiSan) obj;
+            return ten.equals(taiSan.getTen());
+        }
+        catch (Exception e)
+        {
+            return false;
+        }
+
     }
 }

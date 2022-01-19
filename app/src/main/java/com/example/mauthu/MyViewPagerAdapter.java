@@ -2,7 +2,6 @@ package com.example.mauthu;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.mauthu.fragment.Fragment1Of1;

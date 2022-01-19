@@ -94,6 +94,7 @@ public class Fragment2Of1 extends Fragment {
                         "C++",
                         pcJava,
                         Color.parseColor("#EF5350")));
+        pieChart.startAnimation();
     }
     private void setData2() {
         float pcR = 0;
@@ -130,6 +131,7 @@ public class Fragment2Of1 extends Fragment {
                         "C++",
                         pcJava,
                         Color.parseColor("#EF5350")));
+        pieChart2.startAnimation();
     }
     private void setData3() {
         float pcR = 0;
@@ -166,5 +168,6 @@ public class Fragment2Of1 extends Fragment {
                         "C++",
                         pcJava,
                         Color.parseColor("#EF5350")));
+        pieChart3.startAnimation();
     }
 }

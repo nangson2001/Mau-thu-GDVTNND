@@ -2,7 +2,6 @@ package com.example.mauthu.fragment;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -106,6 +105,7 @@ public class Fragment1Of1 extends Fragment {
                         "Java",
                         pcJava,
                         Color.parseColor("#29B6F6")));
+        pieChart.startAnimation();
     }
 
     private void setData2() {
@@ -153,6 +153,7 @@ public class Fragment1Of1 extends Fragment {
                         "Java",
                         pcJava,
                         Color.parseColor("#29B6F6")));
+        pieChart2.startAnimation();
     }
 
     private void setData3() {
@@ -200,5 +201,6 @@ public class Fragment1Of1 extends Fragment {
                         "Java",
                         pcJava,
                         Color.parseColor("#29B6F6")));
+        pieChart3.startAnimation();
     }
 }

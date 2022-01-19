@@ -3,6 +3,7 @@ package com.example.mauthu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,9 +14,16 @@ import java.util.List;
 public class KhauHaoAdapter extends RecyclerView.Adapter<KhauHaoAdapter.KhauHaoViewHolder>{
 
     private List<TaiSan> taiSanList;
+    private IItemKHClick iItemKHClick;
 
-    public KhauHaoAdapter(List<TaiSan> taiSanList) {
+    public KhauHaoAdapter(List<TaiSan> taiSanList, IItemKHClick iItemKHClick) {
         this.taiSanList = taiSanList;
+        this.iItemKHClick = iItemKHClick;
+    }
+
+    public interface IItemKHClick {
+        void onUpdateClick(TaiSan taiSan);
+        void onDeleteClick(TaiSan taiSan);
     }
 
     @NonNull
@@ -35,6 +43,13 @@ public class KhauHaoAdapter extends RecyclerView.Adapter<KhauHaoAdapter.KhauHaoV
         holder.nhom.setText(taiSan.getNhom());
         holder.nguoiSoHuu.setText(String.valueOf(taiSan.getKhauHaoHangThang()));
         holder.loai.setText(String.valueOf(taiSan.getGiaTien()));
+
+        holder.btnEdit.setOnClickListener(v -> {
+            iItemKHClick.onUpdateClick(taiSan);
+        });
+        holder.btnDelete.setOnClickListener(v -> {
+            iItemKHClick.onDeleteClick(taiSan);
+        });
     }
 
     @Override
@@ -44,12 +59,13 @@ public class KhauHaoAdapter extends RecyclerView.Adapter<KhauHaoAdapter.KhauHaoV
     }
 
     public class KhauHaoViewHolder extends RecyclerView.ViewHolder {
-        private TextView STT;
-        private TextView ten;
-        private TextView nhom;
-        private TextView loai;
-        private TextView nguoiSoHuu;
-        private TextView trangThai;
+        TextView STT;
+        TextView ten;
+        TextView nhom;
+        TextView loai;
+        TextView nguoiSoHuu;
+        TextView trangThai;
+        ImageButton btnEdit, btnDelete;
 
 
         public KhauHaoViewHolder(@NonNull View itemView) {
@@ -60,6 +76,8 @@ public class KhauHaoAdapter extends RecyclerView.Adapter<KhauHaoAdapter.KhauHaoV
             loai = itemView.findViewById(R.id.textview_column_42);
             nguoiSoHuu = itemView.findViewById(R.id.textview_column_52);
             trangThai = itemView.findViewById(R.id.textview_column_62);
+            btnDelete = itemView.findViewById(R.id.btn_delete);
+            btnEdit = itemView.findViewById(R.id.btn_edit);
         }
     }
 }
